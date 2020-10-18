@@ -50,15 +50,18 @@ function nextEmployee() {
       type: "list",
       name: "chooseType",
       message: "Which type of employee would you like to add next?",
-      choices: ["Engineer", "Intern"]
+      choices: ["Engineer", "Intern", "That's all!"]
     }
   ).then(function (data) {
     if (data.chooseType === "Engineer") {
       getEngineerDetails();
+    } else if (data.chooseType === "Intern") {
+      getInternDetails();
+    } else {
+      render(allEmployees);
     }
   })
 }
-
 
 getEngineerDetails() {
   inquirer.prompt([
@@ -85,13 +88,43 @@ getEngineerDetails() {
   ]).then(function (data) {
     const engineer = new Engineer(data.engineerName, data.engineerId, data.engineerEmail, data.engineerGithub);
     allEmployees.push(engineer);
+    nextEmployee();
+  });
+}
+
+getInternDetails() {
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "internName",
+      message: `What is the name of the intern?`
+    },
+    {
+      type: "input",
+      name: "internId",
+      message: `What is the intern's ID number?`
+    },
+    {
+      type: "input",
+      name: "internEmail",
+      message: `What is the intern's email?`
+    },
+    {
+      type: "input",
+      name: "internSchool",
+      message: `What is the intern's school?`
+    },
+  ]).then(function (data) {
+    const intern = new Intern(data.internName, data.internId, data.internEmail, data.internSchool);
+    allEmployees.push(intern);
+    nextEmployee();
   });
 }
 
 
 
 
-render(allEmployees);
+
 
 
 
