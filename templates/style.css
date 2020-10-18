@@ -1,0 +1,19 @@
+.jumbotron {
+  background: linear-gradient(90deg, rgb(99, 189, 174) 10%, rgb(181, 160, 221)); 
+}
+
+.card-body {
+  background-color: rgb(230, 230, 230);
+}
+
+.manager {
+  background: linear-gradient(90deg, rgb(144, 140, 184) 10%, rgb(188, 153, 212));
+}
+
+.engineer {
+  background: linear-gradient(90deg, rgb(95, 212, 120) 10%, rgb(117, 202, 174));
+}
+
+.intern {
+  background: linear-gradient(90deg, rgb(240, 190, 109) 10%, rgb(230, 243, 111));
+}

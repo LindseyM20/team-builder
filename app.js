@@ -9,7 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-const { createInflate } = require("zlib");
+// const { createInflate } = require("zlib");
 
 const allEmployees = [];
 
