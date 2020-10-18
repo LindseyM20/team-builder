@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { createInflate } = require("zlib");
 
 const allEmployees = [];
 
@@ -49,7 +50,7 @@ function nextEmployee() {
     {
       type: "list",
       name: "chooseType",
-      message: "Which type of employee would you like to add next?",
+      message: "Awesome! Which type of employee would you like to add next?",
       choices: ["Engineer", "Intern", "That's all!"]
     }
   ).then(function (data) {
@@ -58,12 +59,12 @@ function nextEmployee() {
     } else if (data.chooseType === "Intern") {
       getInternDetails();
     } else {
-      render(allEmployees);
+      createFile();
     }
   })
 }
 
-getEngineerDetails() {
+function getEngineerDetails() {
   inquirer.prompt([
     {
       type: "input",
@@ -92,7 +93,7 @@ getEngineerDetails() {
   });
 }
 
-getInternDetails() {
+function getInternDetails() {
   inquirer.prompt([
     {
       type: "input",
@@ -121,16 +122,12 @@ getInternDetails() {
   });
 }
 
-
-
-
-
-
-
-
-
-
-
+function createFile() {
+  fs.existsSync("output") || fs.mkdirSync("output");
+  fs.writeFile(outputPath, render(allEmployees), function (err) {
+    if (err) { console.log(err) } else { console.log("Success! Check out your new file in the \"output\" directory!") };
+  });
+}
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
