@@ -18,7 +18,7 @@ inquirer.prompt([
   {
     type: "input",
     name: "managerName",
-    message: "Let's start with the manager of your team! What is their name?",
+    message: "Let's start with the manager of your team! What is their name?"
   },
   {
     type: "input",

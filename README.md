@@ -17,7 +17,14 @@
   Commands to run to install dependencies: npm install
 
   ## Usage
-  After running npm i, run the program via the command line argument "node index". You will be prompted to enter your team's information. When complete, a new directory called "output" will appear with your file inside: "team.html". Open "team.html" in a browser to see it.
+  After running npm i, run the program via the command line argument "node app". You will be prompted to enter your team's information. When complete, a new directory called "output" will appear with your file inside: "team.html". Open "team.html" in a browser to see it.
+
+  Here is a walkthrough of the app's functionality: https://drive.google.com/file/d/1W3-V85LQ7BQ3GyJccPdDGqIlGruFWzmA/view
+
+  Here are photos of the app in use and an example finished product:
+
+  ![App in use](./images/appInUse.png)
+  ![Finished example](./images/finishedPage.png)
 
   ## Contributing
   Contact me if you're interested in contributing to this project.
