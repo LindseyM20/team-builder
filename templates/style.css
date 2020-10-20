@@ -1,5 +1,22 @@
+h1 {
+  color: white;
+  font-size: 400%;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: rgb(54, 54, 54);
+}
+
+body {
+  background-color: rgb(206, 207, 211) 
+}
+
 .jumbotron {
-  background: linear-gradient(90deg, rgb(99, 175, 189) 10%, rgb(123, 133, 223)); 
+  background: linear-gradient(90deg, rgb(62, 113, 122) 10%, rgb(59, 65, 117)); 
 }
 
 .card-body {
@@ -7,13 +24,13 @@
 }
 
 .manager {
-  background: linear-gradient(90deg, rgb(144, 140, 184) 10%, rgb(188, 153, 212));
+  background: linear-gradient(180deg, rgb(86, 84, 156) 20%, rgb(138, 139, 172));
 }
 
 .engineer {
-  background: linear-gradient(90deg, rgb(95, 212, 120) 10%, rgb(117, 202, 174));
+  background: linear-gradient(180deg, rgb(58, 123, 126) 30%, rgb(132, 170, 164));
 }
 
 .intern {
-  background: linear-gradient(90deg, rgb(248, 198, 119) 10%, rgb(242, 255, 127));
+  background: linear-gradient(180deg, rgb(192, 159, 49) 10%, rgb(228, 223, 163));
 }
